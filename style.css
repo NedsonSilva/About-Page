@@ -1,0 +1,287 @@
+:root {
+  --blue-cyan: #0080FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ||||| MAIN ||||||||||||||||| */
+main {
+  width: min(90%, 700px);
+  margin: auto;
+}
+
+/* ||||| RESUME ||||||||||||||| */
+#resume {
+  margin-top: 15%;
+  height: 20%;
+  
+}
+
+#resume h2 {
+  font-size: min(8vw, 2.4em);
+  color: var(--blue-cyan);
+  line-height: 46px;
+}
+
+#resume h2:last-of-type {
+  opacity: 0.3;
+}
+
+#resume > p {
+  margin: 15% 0 15% 0;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+/* |||||| BENEFITS  |||||||||| */
+#benefits {
+  display: flex;
+  border-top: 1px solid #f2f2f2;
+  padding-top: 30px;
+}
+
+.benefits-itens {
+  padding-right: 10px;
+}
+
+.benefits-itens:last-of-type {
+  padding: 0;
+}
+
+.benefits-itens h3 {
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.benefits-itens p {
+  opacity: 0.7;
+  line-height: 24px;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+/*||||||||||   WHO WE ARE  |||||||||||||| */
+#who-we-are {
+  margin-top: 15%;
+}
+
+#who-we-are > h2 {
+  font-size: min(9vw, 38px);
+  line-height: 46px;
+}
+
+#who-we-are > p {
+  margin: 5% 0;
+  font-size: min(4.5vw ,1.1em);
+  font-weight: 500;
+} 
+
+/* |||||||  CONTRIBUTORS  ||||||||||| */
+#contributors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contributors-cards {
+  display: flex;
+  align-items: center;
+  background: #FAFAFA;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.contributors-cards span {
+  margin-left: 4%;
+  line-height: 26px;
+} 
+
+.contributors-cards span:last-child {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* ||||||  SOLUTIONS  |||||||||||||| */
+#session-solutions {
+  margin: 15% 0;
+}
+
+#session-solutions div:first-of-type {
+  margin-bottom: 10%;
+}
+
+#session-solutions div h2 {
+  font-size: min(9.5vw, 2.4em);
+}
+
+#session-solutions div p {
+  margin-top: 5%;
+  font-size: 1.1em;
+}
+
+
+#solutions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.solutions-itens {
+  height: 100%;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #F3F3F3;
+  border-radius: 6px;
+  transition: 400ms;
+}
+
+.solutions-itens img {
+  margin-bottom: 8%;
+}
+
+.solutions-itens p {
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 24px;
+}
+
+.solutions-itens:hover {
+  transform: translateY(-2%);
+  box-shadow: -5px 7px 3px #f4f4f4;
+  transition: 400ms;
+}
+
+/* |||| FORM  |||||||||||| */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form fieldset {
+  border: none;
+}
+
+form fieldset legend {
+  font-weight: bold;
+  font-size: min(6vw ,2.4em);
+  margin-bottom: 5%;
+}
+
+#name, #email, #message {
+  width: 100%;
+  height: 45px;
+  background: #FAFAFA;
+  border: none;
+  padding-left: 10px;
+  margin: 5px 0;
+}
+
+#message {
+  padding-left: 10px;
+  padding-top: 10px;
+  height: 118px;
+}
+
+form button {
+  position: relative;
+  width: 75px;
+  height: 45px;
+  background: var(--blue-cyan);
+  font-weight: bold;
+  color: #FFF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.198);
+  border-radius: 6px;
+  border: none;
+  transform: scaleX(0);
+  transition: 500ms ease;
+}
+
+form button:hover::before {
+  transform: scaleX(1); 
+}
+
+/* |||||||||| FOOTER |||||||| */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 5%;
+}
+
+footer div {
+  text-align: center;
+}
+
+footer div h3 {
+  font-size: 1.5em;
+  color: var(--blue-cyan);
+  margin-bottom: 26px;
+}
+
+footer div p:last-of-type{
+  opacity: 0.6;
+  line-height: 46px;
+}
+
+
+/*||||||||| Responsive |||||||*/
+
+@media screen and (max-width: 800px) {
+  #benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-itens {
+    width: 70%;
+    border: 1px solid #f2f2f2;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 2px;
+  }
+  .benefits-itens:last-of-type {
+    padding-left: 10px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  #solutions {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  #contributors {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
